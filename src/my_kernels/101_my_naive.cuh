@@ -32,8 +32,8 @@ __global__ void my_naive_kernel(const float *A, const float *B, float *C,
             //             + A[row][K] * B[K][col]
 
             // 这里要通过 A[row][i] 换算成一个scalar，具体下标
-            AIndex = row * K + i;
-            BIndex = i * N + col;
+            int AIndex = row * K + i;
+            int BIndex = i * N + col;
             tmp += A[AIndex] * B[BIndex];
         }
         // 简单的赋值，和项目对齐，我们使用 alpha*(A@B) + beta*C
