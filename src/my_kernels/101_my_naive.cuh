@@ -1,6 +1,6 @@
 #pragma once
 
-#inclue <cuda_runtime.h>
+#include <cuda_runtime.h>
 
 /*
   计算一个矩阵乘法：C = A @ B
