@@ -10,6 +10,7 @@
 Matrix sizes:
 MxK * KxN = MxN
 
+
 */
 
 __global__ void sgemm_naive(int M, int N, int K, float alpha, const float *A,

@@ -543,6 +543,13 @@ void run_kernel(int kernel_num, int M, int N, int K, float alpha, float *A,
   case 12:
     runSgemmDoubleBuffering2(M, N, K, alpha, A, B, beta, C);
     break;
+
+
+
+  case 101:
+    run_my_sgemm_naive(M, N, K, alpha, A, B, beta, C);
+
+
   default:
     throw std::invalid_argument("Unknown kernel number");
   }
