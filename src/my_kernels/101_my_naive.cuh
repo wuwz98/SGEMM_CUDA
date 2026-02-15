@@ -18,8 +18,8 @@ __global__ void my_naive_kernel(int M, int K, int N, float alpha, const float *A
     // blockIdx：block 在 grid 中的编号
     // blockDim：一个block中，每个方向上有多少thread
 
-    int row = blockIdx.x * blockDim.x + threadIdx.x;
-    int col = blockIdx.y * blockDim.y + threadIdx.y;
+    int col = blockIdx.x * blockDim.x + threadIdx.x;
+    int row = blockIdx.y * blockDim.y + threadIdx.y;
 
     if (row < M && col < K) {
         float tmp = 0.0;
