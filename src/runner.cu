@@ -557,6 +557,7 @@ void run_kernel(int kernel_num, int M, int N, int K, float alpha, float *A,
 
     case 101:
       run_my_sgemm_naive(M, N, K, alpha, A, B, beta, C);
+      break;
 
 
     default:
