@@ -16,7 +16,7 @@ __global__ void my_naive_kernel(int M, int K, int N, float alpha, const float *A
     // 这里的 dim3 grid_size(M/4, N/4, 1)
     // threadIdx: thread 在 block 中的编号
     // blockIdx：block 在 grid 中的编号
-    // blockDim：一共有多少个block，对于每一个thread都是唯一的
+    // blockDim：一个block中，每个方向上有多少thread
 
     int row = blockIdx.x * blockDim.x + threadIdx.x;
     int col = blockIdx.y * blockDim.y + threadIdx.y;
