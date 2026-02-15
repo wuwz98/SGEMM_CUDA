@@ -1,16 +1,7 @@
 #！/bin/bash
-
 set -e
-
-if[-d "build"]; then
-      rm -rf build
-fi
-
+rm -rf build
 mkdir build
-
 cd build
-
 cmake ..
-
 cmake --build .
-
