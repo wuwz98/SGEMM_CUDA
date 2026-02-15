@@ -7,9 +7,8 @@
   其中 A:MxK  B:KxN  C:MxN
  */
 
-__global__ void my_naive_kernel(const float *A, const float *B, float *C,
-                                const int M, const int K, const int N,
-                                float alpha, float beta){
+__global__ void my_naive_kernel(int M, int K, int N, float alpha, const float *A,
+                                const float *B, float beta, float *C){
     // 我们让每个线程计算矩阵中的一个元素
 
     // 那么我们一般会让grid_size 和输出的大小对应，block_size 和问题无关，
